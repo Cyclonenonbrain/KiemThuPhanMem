@@ -53,3 +53,94 @@ java -jar lib/junit-platform-console-standalone.jar -cp out --scan-classpath
 Kết quả mong đợi:
     - Các ca kiểm thử được thực thi thành công
     - Không có test case thất bại
+
+
+# 🧪 BÁO CÁO THỰC HÀNH KIỂM THỬ TỰ ĐỘNG END-TO-END VỚI CYPRESS
+
+### 1. Mục tiêu
+
+Thực hành xây dựng và thực thi các kịch bản kiểm thử tự động End-to-End (E2E) bằng Cypress cho website mẫu:  
+https://www.saucedemo.com
+
+Mục tiêu cụ thể:
+
+- Kiểm tra chức năng đăng nhập (thành công & thất bại)
+- Kiểm tra thêm sản phẩm vào giỏ hàng
+- Kiểm tra chức năng sắp xếp sản phẩm
+- Kiểm tra xóa sản phẩm khỏi giỏ hàng
+- Kiểm tra quy trình thanh toán
+
+---
+
+### 2. Môi trường thực hiện
+
+- Hệ điều hành: Windows
+- Node.js
+- Cypress
+- Trình duyệt: Chrome
+- Website kiểm thử: https://www.saucedemo.com
+
+---
+
+### 3. Phạm vi kiểm thử
+
+Phạm vi kiểm thử bao gồm các chức năng chính:
+
+- Authentication (Login)
+- Product listing
+- Cart management
+- Checkout process
+
+Không bao gồm:
+
+- Kiểm thử hiệu năng
+- Kiểm thử bảo mật
+- Kiểm thử API
+
+---
+
+### 4. Danh sách Test Case
+
+| STT | Tên Test Case | Mô tả | Kết quả mong đợi | Trạng thái |
+|-----|---------------|--------|------------------|------------|
+| 1 | Login thành công | Đăng nhập với tài khoản hợp lệ | Điều hướng tới `/inventory.html` | ✅ Pass |
+| 2 | Login thất bại | Đăng nhập với tài khoản sai | Hiển thị thông báo lỗi | ✅ Pass |
+| 3 | Thêm sản phẩm vào giỏ | Thêm sản phẩm đầu tiên | Badge giỏ hàng hiển thị `1` | ✅ Pass |
+| 4 | Sắp xếp theo giá thấp đến cao | Chọn filter `Price (low to high)` | Sản phẩm đầu có giá thấp nhất | ✅ Pass |
+| 5 | Xóa sản phẩm khỏi giỏ | Remove sản phẩm đã thêm | Badge giỏ hàng biến mất | ✅ Pass |
+| 6 | Quy trình thanh toán | Điền thông tin và Continue | Điều hướng tới `/checkout-step-two.html` | ✅ Pass |
+
+---
+
+### 5. Kết quả thực thi
+
+Tất cả các test case đều được thực thi thành công thông qua Cypress.
+
+- Không phát hiện lỗi chức năng trong phạm vi kiểm thử.
+- Các assertion đều đạt yêu cầu.
+
+---
+
+### 6. Bằng chứng thực thi (Video)
+
+Video thực thi kiểm thử được lưu tại:
+cypress-exercise/cypress/videos/
+
+---
+
+### 7. Coverage kiểm thử
+
+Các chức năng chính của hệ thống đã được kiểm thử:
+
+- Đăng nhập người dùng
+- Thao tác với giỏ hàng
+- Sắp xếp danh sách sản phẩm
+- Quy trình thanh toán
+
+Coverage hiện tại tập trung vào:
+
+- Functional E2E testing
+- UI flow validation
+- User interaction validation
+
+---
