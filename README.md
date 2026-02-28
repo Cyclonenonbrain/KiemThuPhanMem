@@ -250,3 +250,27 @@ Kiểm thử hiệu năng trang web **baomoi.com** bằng Apache JMeter nhằm �
   - `jmeter/results/thread-group-2/`
   - `jmeter/results/thread-group-3/`
 
+
+# BÁO CÁO BÀI TẬP KIỂM THỬ PHẦN MỀM (MANUAL TESTING) - WEBSITE E-COMMERCE
+
+### 1. Giới thiệu
+Bài tập thực hành Kiểm thử phần mềm thủ công (Manual Testing) cho hệ thống Website bán hàng trực tuyến (E-commerce) giả lập. Dự án được thiết kế đầy đủ quy trình QA từ đầu đến cuối nhằm đảm bảo chất lượng phần mềm.
+
+---
+
+### 2. Cấu trúc thư mục báo cáo (Deliverables)
+Toàn bộ tài liệu đánh giá kỹ thuật số đã được tổ chức quy củ trong thư mục `E-Commerce_Manual_Testing`. Các bạn có thể trực tiếp truy cập vào hệ thống thư mục để xem tài liệu chi tiết:
+
+- 📄 **[Kế hoạch kiểm thử (Test Plan)](./E-Commerce_Manual_Testing/Test%20Plan/Test_Plan.md)**: Xác định rõ ràng phạm vi, mức độ rủi ro, môi trường kiểm thử (In-scope/Out-of-scope).
+- 📋 **[Ca kiểm thử (Test Cases)](./E-Commerce_Manual_Testing/Test%20Cases/Test_Cases.md)**: Bộ 45 Test cases (bao gồm Positive, Negative, Boundary, Security) phủ sóng 3 Module chính (Authentication, Product & Cart, Checkout).
+- 🔗 **[Ma trận truy vết yêu cầu (RTM)](./E-Commerce_Manual_Testing/RTM/RTM.md)**: Đảm bảo độ bao phủ 16 Requirement đề bài cho đạt 100% (Requirement Coverage).
+- 🐞 **[Báo cáo lỗi (Bug Reports)](./E-Commerce_Manual_Testing/Bug%20Reports/Bug_Reports.md)**: Tracking chi tiết 10 lỗi giả định với đẩy đủ thông số: Severity, Priority, Steps to reproduce, System environment...
+- 📊 **[Báo cáo kiểm thử (Test Report)](./E-Commerce_Manual_Testing/Test%20Report/Test_Report.md)**: Phân tích số liệu và đưa ra quyết định "KHÔNG PHÁT HÀNH" (No-release) có căn cứ để bảo vệ điểm chất lượng cuối cùng.
+- 📈 **[Chỉ số kiểm thử (Test Metrics)](./E-Commerce_Manual_Testing/Test%20Metrics/Test_Metrics.md)**: Đánh giá bằng 4 chỉ số cốt lõi QA: Execution rate, Pass rate, Defect Density, Severity Distribution,...
+
+---
+
+### 3. Tóm tắt kết quả
+- **Tổng số lượng TC:** 45 TCs (Pass: 77.8%, Fail: 22.2%)
+- **Tình trạng tổng quan:** Phát hiện 10 Bugs (Trong đó có 2 lỗi Critical cực kì nghiêm trọng liên quan tới lỗi hệ thống thanh toán và tính toán tiền tệ âm).
+- **Quyết định Release:** `No-Release` (Do tỷ lệ pass chưa đạt kỳ vọng 95% và tồn đọng lỗi Critical cần bên khối Kỹ thuật fix gấp).
