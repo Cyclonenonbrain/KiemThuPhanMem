@@ -144,3 +144,125 @@ Coverage hiện tại tập trung vào:
 - User interaction validation
 
 ---
+
+# 🚀 BÁO CÁO KIỂM THỬ HIỆU NĂNG VỚI JMETER
+
+### 1. Mục tiêu
+
+Kiểm thử hiệu năng trang web **baomoi.com** bằng Apache JMeter nhằm đánh giá:
+- Thời gian phản hồi (Response Time) của website dưới các mức tải khác nhau
+- Throughput (số request/giây) website có thể xử lý
+- Tỷ lệ lỗi (Error Rate) khi tăng số lượng người dùng đồng thời
+
+---
+
+### 2. Môi trường thực hiện
+
+- Hệ điều hành: Windows
+- Công cụ: Apache JMeter 5.6.3
+- Java: JDK (cài sẵn)
+- Website kiểm thử: https://baomoi.com
+- Chế độ chạy: Non-GUI (CLI)
+
+---
+
+### 3. Cấu hình kịch bản kiểm thử
+
+| Tham số | Thread Group 1 (Cơ bản) | Thread Group 2 (Tải nặng) | Thread Group 3 (Tuỳ chỉnh) |
+|---|---|---|---|
+| Số users | 10 | 50 | 7 |
+| Ramp-up | 10s | 30s | 30s |
+| Loop/Duration | 5 loops | 1 loop | 60 giây |
+| Hành vi | GET `/` | GET `/` + GET `/tin-moi.epi` | GET `/kham-pha-viet-nam-top335.epi` + GET `/the-thao.epi` |
+| Timer | Không dùng | Không dùng | Uniform Random Timer (Delay Offset = 3000ms, Random Delay Maximum = 4000ms) |
+
+---
+
+### 4. Kết quả kiểm thử
+
+#### Thread Group 1 — Kịch bản cơ bản (10 users)
+
+| Chỉ số | Giá trị |
+|---|---|
+| Tổng requests | 50 |
+| Response Time (Avg) | 294 ms |
+| Response Time (Min) | 218 ms |
+| Response Time (Max) | 579 ms |
+| Error Rate | **0%** |
+| Throughput | ~4.87 req/s |
+
+#### Thread Group 2 — Kịch bản tải nặng (50 users)
+
+| Chỉ số | GET `/` (Trang chủ) | GET `/tin-moi.epi` (Tin mới) |
+|---|---|---|
+| Tổng requests | 50 | 50 |
+| Response Time (Avg) | 303 ms | 205 ms |
+| Response Time (Min) | 228 ms | 138 ms |
+| Response Time (Max) | 543 ms | 584 ms |
+| Error Rate | **0%** | **0%** |
+
+#### Thread Group 3 — Kịch bản tuỳ chỉnh (7 users, 60s, có Uniform Random Timer)
+
+| Chỉ số | GET `/kham-pha-viet-nam-top335.epi` | GET `/the-thao.epi` |
+|---|---|---|
+| Tổng requests | 33 | 30 |
+| Response Time (Avg) | 241 ms | 220 ms |
+| Response Time (Min) | 134 ms | 183 ms |
+| Response Time (Max) | 345 ms | 319 ms |
+| Error Rate | **0%** | **0%** |
+| Requests thành công | 33 | 30 |
+
+> **Lưu ý:** Sau khi thêm Uniform Random Timer (3–7 giây/request), kịch bản TG3 không còn phát sinh mã lỗi 403 trong lần chạy cập nhật.
+
+---
+
+### 5. Phân tích kết quả kiểm thử
+
+#### 5.1. So sánh giữa 3 Thread Groups
+
+| Tiêu chí | TG1 (10 users) | TG2 (50 users) | TG3 (7 users, 60s + Timer) |
+|---|---|---|---|
+| Tổng requests | 50 | 100 | 63 |
+| Error Rate (overall) | **0%** | **0%** | **0%** |
+| Avg Response Time | 294 ms | 254 ms | 231 ms |
+| Throughput (overall) | ~4.87 req/s | ~3.34 req/s | ~1.14 req/s |
+| Nguyên nhân lỗi | Không có | Không có | Không có |
+
+- **TG1** hoạt động ổn định, response time giữ trong khoảng 218–579ms, không có lỗi.
+- **TG2** vẫn đạt 0% lỗi với 50 users đồng thời và 2 endpoint.
+- **TG3** có tải thực tế hơn nhờ Timer 3–7 giây nên không còn burst request dồn dập và không còn lỗi 403.
+
+#### 5.2. Nhận xét hiệu năng website
+
+- **Trang chủ (`/`)** giữ mức phản hồi ổn định ở TG1/TG2, không có lỗi.
+- **Trang `/tin-moi.epi`** có thời gian phản hồi trung bình thấp hơn trang chủ ở TG2 (205ms vs 303ms).
+- **Trang `/the-thao.epi`** và **`/kham-pha-viet-nam-top335.epi`** đều trả về 200 OK toàn bộ trong cấu hình TG3 mới.
+- Việc thêm Timer giúp mô phỏng hành vi người dùng thật hơn và giảm nguy cơ bị rate limiting.
+
+#### 5.3. Đánh giá khả năng chịu tải
+
+- Trong cấu hình hiện tại, cả 3 Thread Groups đều đạt **100% thành công**.
+- TG3 đã chuyển sang mô hình tải "dịu hơn" (7 users + Timer 3–7 giây), nên kết quả phản ánh tốt hơn hành vi truy cập thực tế.
+- Vì cấu hình TG3 mới giảm tải mạnh so với kịch bản cũ, chưa thể dùng kết quả này để kết luận ngưỡng rate limiting tối đa của hệ thống.
+
+#### 5.4. Đề xuất cải thiện
+
+1. **Giữ Timer ở TG3** cho các bài kiểm thử mô phỏng người dùng thật.
+2. **Tăng tải theo nấc** (ví dụ 7 → 10 → 15 → 20 users) để tìm điểm bắt đầu xuất hiện 403.
+3. **Theo dõi thêm percentile** (P90/P95/P99) ngoài trung bình để đánh giá độ ổn định latency.
+4. **So sánh nhiều lần chạy** ở các khung giờ khác nhau để giảm sai số do biến động hạ tầng bên ngoài.
+
+---
+
+### 6. Bằng chứng thực thi
+
+- File Test Plan: `jmeter/test-plan.jmx`
+- Kết quả CSV:
+  - `jmeter/results/all-results.csv`
+  - `jmeter/results/thread-group-1/summary.csv`
+  - `jmeter/results/thread-group-2/summary.csv`
+  - `jmeter/results/thread-group-3/summary.csv`
+- Log chạy CLI: `jmeter/results/jmeter.log` (có thể xoá sau khi hoàn tất báo cáo)
+- Screenshot Summary Report: `images/jmeter-summary-tg1.png`, `images/jmeter-summary-tg2.png`, `images/jmeter-summary-tg3.png`
+
+---
