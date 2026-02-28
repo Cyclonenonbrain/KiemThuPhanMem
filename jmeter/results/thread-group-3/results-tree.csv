@@ -1,0 +1,64 @@
+timeStamp,elapsed,label,responseCode,responseMessage,threadName,dataType,success,failureMessage,bytes,sentBytes,grpThreads,allThreads,URL,Latency,IdleTime,Connect
+1772269102755,328,GET - Kham pha Viet Nam,200,OK,Thread Group 3 - Kich ban tuy chinh 3-1,text,true,,395616,340,2,2,https://baomoi.com/kham-pha-viet-nam-top335.epi,134,0,26
+1772269106084,228,GET - Kham pha Viet Nam,200,OK,Thread Group 3 - Kich ban tuy chinh 3-2,text,true,,395663,340,2,2,https://baomoi.com/kham-pha-viet-nam-top335.epi,108,0,25
+1772269106621,192,GET - The thao,200,OK,Thread Group 3 - Kich ban tuy chinh 3-1,text,true,,328817,324,3,3,https://baomoi.com/the-thao.epi,91,0,0
+1772269110204,212,GET - The thao,200,OK,Thread Group 3 - Kich ban tuy chinh 3-2,text,true,,328850,324,3,3,https://baomoi.com/the-thao.epi,88,0,0
+1772269111376,243,GET - Kham pha Viet Nam,200,OK,Thread Group 3 - Kich ban tuy chinh 3-3,text,true,,395671,340,4,4,https://baomoi.com/kham-pha-viet-nam-top335.epi,114,0,22
+1772269112403,283,GET - Kham pha Viet Nam,200,OK,Thread Group 3 - Kich ban tuy chinh 3-1,text,true,,395782,340,4,4,https://baomoi.com/kham-pha-viet-nam-top335.epi,99,0,0
+1772269114494,224,GET - Kham pha Viet Nam,200,OK,Thread Group 3 - Kich ban tuy chinh 3-4,text,true,,395647,340,4,4,https://baomoi.com/kham-pha-viet-nam-top335.epi,114,0,30
+1772269115773,319,GET - The thao,200,OK,Thread Group 3 - Kich ban tuy chinh 3-1,text,true,,328834,324,5,5,https://baomoi.com/the-thao.epi,108,0,0
+1772269115871,274,GET - Kham pha Viet Nam,200,OK,Thread Group 3 - Kich ban tuy chinh 3-2,text,true,,395663,340,5,5,https://baomoi.com/kham-pha-viet-nam-top335.epi,95,0,0
+1772269117958,212,GET - The thao,200,OK,Thread Group 3 - Kich ban tuy chinh 3-4,text,true,,328794,324,5,5,https://baomoi.com/the-thao.epi,88,0,0
+1772269118225,221,GET - The thao,200,OK,Thread Group 3 - Kich ban tuy chinh 3-3,text,true,,328802,324,5,5,https://baomoi.com/the-thao.epi,108,0,0
+1772269119319,206,GET - The thao,200,OK,Thread Group 3 - Kich ban tuy chinh 3-2,text,true,,328810,324,6,6,https://baomoi.com/the-thao.epi,88,0,0
+1772269121009,262,GET - Kham pha Viet Nam,200,OK,Thread Group 3 - Kich ban tuy chinh 3-5,text,true,,395648,340,6,6,https://baomoi.com/kham-pha-viet-nam-top335.epi,137,0,33
+1772269121373,209,GET - Kham pha Viet Nam,200,OK,Thread Group 3 - Kich ban tuy chinh 3-1,text,true,,395639,340,6,6,https://baomoi.com/kham-pha-viet-nam-top335.epi,77,0,0
+1772269121614,152,GET - Kham pha Viet Nam,200,OK,Thread Group 3 - Kich ban tuy chinh 3-3,text,true,,395576,340,6,6,https://baomoi.com/kham-pha-viet-nam-top335.epi,88,0,0
+1772269121949,206,GET - Kham pha Viet Nam,200,OK,Thread Group 3 - Kich ban tuy chinh 3-4,text,true,,395648,340,6,6,https://baomoi.com/kham-pha-viet-nam-top335.epi,96,0,0
+1772269125302,335,GET - Kham pha Viet Nam,200,OK,Thread Group 3 - Kich ban tuy chinh 3-6,text,true,,395758,340,7,7,https://baomoi.com/kham-pha-viet-nam-top335.epi,118,0,37
+1772269125383,278,GET - The thao,200,OK,Thread Group 3 - Kich ban tuy chinh 3-3,text,true,,328818,324,7,7,https://baomoi.com/the-thao.epi,92,0,0
+1772269125801,267,GET - Kham pha Viet Nam,200,OK,Thread Group 3 - Kich ban tuy chinh 3-2,text,true,,395672,340,7,7,https://baomoi.com/kham-pha-viet-nam-top335.epi,128,0,0
+1772269125960,223,GET - The thao,200,OK,Thread Group 3 - Kich ban tuy chinh 3-5,text,true,,328810,324,7,7,https://baomoi.com/the-thao.epi,115,0,0
+1772269127373,202,GET - The thao,200,OK,Thread Group 3 - Kich ban tuy chinh 3-4,text,true,,328802,324,7,7,https://baomoi.com/the-thao.epi,92,0,0
+1772269128186,199,GET - The thao,200,OK,Thread Group 3 - Kich ban tuy chinh 3-1,text,true,,328842,324,7,7,https://baomoi.com/the-thao.epi,97,0,0
+1772269129868,182,GET - Kham pha Viet Nam,200,OK,Thread Group 3 - Kich ban tuy chinh 3-3,text,true,,395615,340,7,7,https://baomoi.com/kham-pha-viet-nam-top335.epi,104,0,0
+1772269130560,218,GET - Kham pha Viet Nam,200,OK,Thread Group 3 - Kich ban tuy chinh 3-7,text,true,,395646,340,7,7,https://baomoi.com/kham-pha-viet-nam-top335.epi,110,0,27
+1772269131357,191,GET - The thao,200,OK,Thread Group 3 - Kich ban tuy chinh 3-2,text,true,,328810,324,7,7,https://baomoi.com/the-thao.epi,94,0,0
+1772269131711,215,GET - The thao,200,OK,Thread Group 3 - Kich ban tuy chinh 3-6,text,true,,328826,324,7,7,https://baomoi.com/the-thao.epi,104,0,0
+1772269131906,218,GET - Kham pha Viet Nam,200,OK,Thread Group 3 - Kich ban tuy chinh 3-5,text,true,,395631,340,7,7,https://baomoi.com/kham-pha-viet-nam-top335.epi,94,0,0
+1772269133132,247,GET - Kham pha Viet Nam,200,OK,Thread Group 3 - Kich ban tuy chinh 3-4,text,true,,395702,340,7,7,https://baomoi.com/kham-pha-viet-nam-top335.epi,91,0,0
+1772269133845,231,GET - Kham pha Viet Nam,200,OK,Thread Group 3 - Kich ban tuy chinh 3-1,text,true,,395639,340,7,7,https://baomoi.com/kham-pha-viet-nam-top335.epi,103,0,0
+1772269134871,208,GET - The thao,200,OK,Thread Group 3 - Kich ban tuy chinh 3-7,text,true,,328818,324,7,7,https://baomoi.com/the-thao.epi,90,0,0
+1772269135142,237,GET - Kham pha Viet Nam,200,OK,Thread Group 3 - Kich ban tuy chinh 3-2,text,true,,395631,340,7,7,https://baomoi.com/kham-pha-viet-nam-top335.epi,95,0,0
+1772269135934,240,GET - The thao,200,OK,Thread Group 3 - Kich ban tuy chinh 3-3,text,true,,328826,324,7,7,https://baomoi.com/the-thao.epi,101,0,0
+1772269136295,240,GET - Kham pha Viet Nam,200,OK,Thread Group 3 - Kich ban tuy chinh 3-6,text,true,,395719,340,7,7,https://baomoi.com/kham-pha-viet-nam-top335.epi,101,0,0
+1772269137250,190,GET - The thao,200,OK,Thread Group 3 - Kich ban tuy chinh 3-5,text,true,,328801,324,7,7,https://baomoi.com/the-thao.epi,87,0,0
+1772269137779,228,GET - The thao,200,OK,Thread Group 3 - Kich ban tuy chinh 3-4,text,true,,328819,324,7,7,https://baomoi.com/the-thao.epi,89,0,0
+1772269138828,314,GET - The thao,200,OK,Thread Group 3 - Kich ban tuy chinh 3-1,text,true,,328842,324,7,7,https://baomoi.com/the-thao.epi,182,0,0
+1772269140038,188,GET - The thao,200,OK,Thread Group 3 - Kich ban tuy chinh 3-6,text,true,,328778,324,7,7,https://baomoi.com/the-thao.epi,91,0,0
+1772269140481,194,GET - The thao,200,OK,Thread Group 3 - Kich ban tuy chinh 3-2,text,true,,328826,324,7,7,https://baomoi.com/the-thao.epi,93,0,0
+1772269140573,251,GET - Kham pha Viet Nam,200,OK,Thread Group 3 - Kich ban tuy chinh 3-3,text,true,,395663,340,7,7,https://baomoi.com/kham-pha-viet-nam-top335.epi,111,0,0
+1772269141021,134,GET - Kham pha Viet Nam,200,OK,Thread Group 3 - Kich ban tuy chinh 3-7,text,true,,395545,340,7,7,https://baomoi.com/kham-pha-viet-nam-top335.epi,86,0,0
+1772269141422,227,GET - Kham pha Viet Nam,200,OK,Thread Group 3 - Kich ban tuy chinh 3-5,text,true,,395640,340,7,7,https://baomoi.com/kham-pha-viet-nam-top335.epi,85,0,0
+1772269141424,225,GET - Kham pha Viet Nam,200,OK,Thread Group 3 - Kich ban tuy chinh 3-4,text,true,,395686,340,7,7,https://baomoi.com/kham-pha-viet-nam-top335.epi,91,0,0
+1772269142480,234,GET - Kham pha Viet Nam,200,OK,Thread Group 3 - Kich ban tuy chinh 3-1,text,true,,395751,340,7,7,https://baomoi.com/kham-pha-viet-nam-top335.epi,94,0,0
+1772269143999,193,GET - The thao,200,OK,Thread Group 3 - Kich ban tuy chinh 3-3,text,true,,328849,324,7,7,https://baomoi.com/the-thao.epi,81,0,0
+1772269144211,345,GET - Kham pha Viet Nam,200,OK,Thread Group 3 - Kich ban tuy chinh 3-6,text,true,,395647,340,7,7,https://baomoi.com/kham-pha-viet-nam-top335.epi,95,0,0
+1772269144274,296,GET - Kham pha Viet Nam,200,OK,Thread Group 3 - Kich ban tuy chinh 3-2,text,true,,395735,340,7,7,https://baomoi.com/kham-pha-viet-nam-top335.epi,90,0,0
+1772269145875,183,GET - The thao,200,OK,Thread Group 3 - Kich ban tuy chinh 3-4,text,true,,328818,324,7,7,https://baomoi.com/the-thao.epi,82,0,0
+1772269146416,218,GET - The thao,200,OK,Thread Group 3 - Kich ban tuy chinh 3-1,text,true,,328810,324,7,7,https://baomoi.com/the-thao.epi,106,0,0
+1772269146581,219,GET - The thao,200,OK,Thread Group 3 - Kich ban tuy chinh 3-7,text,true,,328826,324,7,7,https://baomoi.com/the-thao.epi,110,0,0
+1772269146863,199,GET - The thao,200,OK,Thread Group 3 - Kich ban tuy chinh 3-5,text,true,,328787,324,7,7,https://baomoi.com/the-thao.epi,93,0,0
+1772269149079,214,GET - Kham pha Viet Nam,200,OK,Thread Group 3 - Kich ban tuy chinh 3-3,text,true,,395631,340,7,7,https://baomoi.com/kham-pha-viet-nam-top335.epi,93,0,0
+1772269149312,218,GET - Kham pha Viet Nam,200,OK,Thread Group 3 - Kich ban tuy chinh 3-4,text,true,,395647,340,7,7,https://baomoi.com/kham-pha-viet-nam-top335.epi,94,0,0
+1772269150637,220,GET - The thao,200,OK,Thread Group 3 - Kich ban tuy chinh 3-6,text,true,,328840,324,7,7,https://baomoi.com/the-thao.epi,92,0,0
+1772269150715,295,GET - Kham pha Viet Nam,200,OK,Thread Group 3 - Kich ban tuy chinh 3-7,text,true,,395656,340,7,7,https://baomoi.com/kham-pha-viet-nam-top335.epi,87,0,0
+1772269151405,225,GET - The thao,200,OK,Thread Group 3 - Kich ban tuy chinh 3-2,text,true,,328858,324,7,7,https://baomoi.com/the-thao.epi,90,0,0
+1772269151901,243,GET - Kham pha Viet Nam,200,OK,Thread Group 3 - Kich ban tuy chinh 3-1,text,true,,395672,340,7,7,https://baomoi.com/kham-pha-viet-nam-top335.epi,84,0,0
+1772269153152,185,GET - The thao,200,OK,Thread Group 3 - Kich ban tuy chinh 3-3,text,true,,328762,324,7,7,https://baomoi.com/the-thao.epi,102,0,0
+1772269153759,197,GET - Kham pha Viet Nam,200,OK,Thread Group 3 - Kich ban tuy chinh 3-5,text,true,,395663,340,6,6,https://baomoi.com/kham-pha-viet-nam-top335.epi,91,0,0
+1772269155549,273,GET - Kham pha Viet Nam,200,OK,Thread Group 3 - Kich ban tuy chinh 3-2,text,true,,395632,340,5,5,https://baomoi.com/kham-pha-viet-nam-top335.epi,132,0,0
+1772269156235,249,GET - The thao,200,OK,Thread Group 3 - Kich ban tuy chinh 3-4,text,true,,328819,324,4,4,https://baomoi.com/the-thao.epi,113,0,0
+1772269156354,238,GET - The thao,200,OK,Thread Group 3 - Kich ban tuy chinh 3-7,text,true,,328826,324,3,3,https://baomoi.com/the-thao.epi,130,0,0
+1772269157024,224,GET - The thao,200,OK,Thread Group 3 - Kich ban tuy chinh 3-1,text,true,,328818,324,2,2,https://baomoi.com/the-thao.epi,85,0,0
+1772269157776,229,GET - Kham pha Viet Nam,200,OK,Thread Group 3 - Kich ban tuy chinh 3-6,text,true,,395623,340,1,1,https://baomoi.com/kham-pha-viet-nam-top335.epi,97,0,0
